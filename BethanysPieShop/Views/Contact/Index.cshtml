@@ -1,0 +1,32 @@
+﻿@model EmailInfo
+
+   
+    <form asp-action="SendingEmail" asp-controller="Contact" class="">
+        <p class="lead">
+            Contact us
+        </p>
+        <br />
+        <div class="input-group">
+            <span class="input-group-addon" id="basic-addon1">Name</span>
+            <input type="text" class="form-control" asp-for="Name" aria-describedby="basic-addon1">
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <br />
+        <div class="input-group">
+            <input type="email" asp-for="Email" class="form-control" placeholder="Email" aria-describedby="basic-addon2">
+            <span class="input-group-addon" id="basic-addon2">exabmble@example.com</span>
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+        <br />
+        <div class="input-group">
+            <textarea type="text" asp-for="Message" class="form-control" placeholder="Message" style="height:200px;width:847px;"></textarea>
+            <span asp-validation-for="Message" class="text-danger"></span>
+        </div>
+        <br />
+        <div class="form-group">
+            <div class="">
+                <input type="submit" class="btn btn-primary" style="float:right;" value="Send" />
+            </div>
+        </div>
+    </form>
+  
